@@ -1,6 +1,7 @@
 # startpage
 
-Yet another minimal startpage:
+minimal startpage:
+
 - Font: JetBrainsMono Nerd Font
 - Colour Scheme(s): Tokyo Night, Colours derived from cover image
 
