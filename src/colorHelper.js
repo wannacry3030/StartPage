@@ -8,20 +8,42 @@ const imageDiv = document.getElementById("imageDiv");
 const image = document.getElementById("image");
 
 // Sets paths for image carousel
-const imageFiles = ["../src/images/image1.jpg", "../src/images/image2.jpg", "../src/images/image3.jpg"];
+const imageFiles = [
+  "../src/images/key.png",
+  "../src/images/key.png",
+  "../src/images/key.png",
+];
 
 // Set color variables for hex codes we use more than once
-const tokyoNightPurple = "#bb9af7";
-const tokyoNightBackground = "#1a1b26"
-const tokyoNightBlue = "#7aa2f7"
-const tokyoNightForeground = "#CDD6F4"
-const tokyoNightYellow = "#E0AF68"
+const tokyoNightPurple = "#F6778D";
+const tokyoNightBackground = "#1B1D28";
+const tokyoNightBlue = "#A9B1D6";
+const tokyoNightForeground = "#CDD6F4";
+const tokyoNightYellow = "#E0AF68";
 
 // Define color arrays for each image
 const colors = [
-  { color: tokyoNightYellow, background: tokyoNightBackground, hlcol: tokyoNightBlue, linkcol: "#A8B8CF", hovercol: tokyoNightPurple }, // colors for image 1
-  { color: "#D2C7CB", background: "#15191d", hlcol: "#28725A", linkcol: "#9fadc6", hovercol: "#9B5856" }, // colors for image 2
-  { color: tokyoNightPurple, background: tokyoNightBackground, hlcol: tokyoNightBlue, linkcol: tokyoNightForeground, hovercol: tokyoNightYellow },  // colors for image 3
+  {
+    color: tokyoNightYellow,
+    background: tokyoNightBackground,
+    hlcol: tokyoNightBlue,
+    linkcol: "#A8B8CF",
+    hovercol: tokyoNightPurple,
+  }, // colors for image 1
+  {
+    color: "#D2C7CB",
+    background: "#1B1D28",
+    hlcol: "#28725A",
+    linkcol: "#9fadc6",
+    hovercol: "#F6778D",
+  }, // colors for image 2
+  {
+    color: tokyoNightPurple,
+    background: tokyoNightBackground,
+    hlcol: tokyoNightBlue,
+    linkcol: tokyoNightForeground,
+    hovercol: tokyoNightYellow,
+  }, // colors for image 3
 ];
 
 // Define a function to preload the images
@@ -37,11 +59,26 @@ function preloadImages() {
 
 // Define applyColors function to change color properties depending on the counter
 function applyColors(counter, colors) {
-  document.documentElement.style.setProperty('--primary-color', colors[counter].linkcol);
-  document.documentElement.style.setProperty('--secondary-color', colors[counter].color);
-  document.documentElement.style.setProperty('--accent-color', colors[counter].hlcol);
-  document.documentElement.style.setProperty('--link-accent-color', colors[counter].hovercol);
-  document.documentElement.style.setProperty('--bg-color', colors[counter].background);
+  document.documentElement.style.setProperty(
+    "--primary-color",
+    colors[counter].linkcol
+  );
+  document.documentElement.style.setProperty(
+    "--secondary-color",
+    colors[counter].color
+  );
+  document.documentElement.style.setProperty(
+    "--accent-color",
+    colors[counter].hlcol
+  );
+  document.documentElement.style.setProperty(
+    "--link-accent-color",
+    colors[counter].hovercol
+  );
+  document.documentElement.style.setProperty(
+    "--bg-color",
+    colors[counter].background
+  );
 }
 
 // Call the preloadImages function to start loading the images
@@ -54,7 +91,7 @@ image.src = imageFiles[counter];
 applyColors(counter, colors);
 
 // Listens for clicks on the image
-imageDiv.addEventListener("click", function() {
+imageDiv.addEventListener("click", function () {
   // Add a class to the image element
   image.classList.add("fade-out");
 
@@ -70,6 +107,6 @@ imageDiv.addEventListener("click", function() {
 
     // Apply colors
     applyColors(counter, colors);
-     // 200 sets time of 0.2s for transition
+    // 200 sets time of 0.2s for transition
   }, 200);
 });
