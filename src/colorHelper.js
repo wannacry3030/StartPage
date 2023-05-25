@@ -33,7 +33,7 @@ const colors = [
   {
     color: "#D2C7CB",
     background: "#1B1D28",
-    hlcol: "#28725A",
+    hlcol: "#E0AF68",
     linkcol: "#9fadc6",
     hovercol: "#F6778D",
   }, // colors for image 2
