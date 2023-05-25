@@ -27,14 +27,14 @@ const colors = [
     color: tokyoNightYellow,
     background: tokyoNightBackground,
     hlcol: tokyoNightPurple,
-    linkcol: "#A8B8CF",
+    linkcol: tokyoNightForeground,
     hovercol: tokyoNightPurple,
   }, // colors for image 1
   {
-    color: "#D2C7CB",
+    color: tokyoNightPurple,
     background: "#1B1D28",
     hlcol: "#E0AF68",
-    linkcol: "#9fadc6",
+    linkcol: tokyoNightForeground,
     hovercol: "#F6778D",
   }, // colors for image 2
   {
